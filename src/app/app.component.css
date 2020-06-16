@@ -1,0 +1,24 @@
+div {
+    align-content: center;
+}
+
+.heading {
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    padding: 25px;
+    align-content: center;
+}
+
+table, tr, td {
+    align-content: center;
+    border-style: solid;
+    border-color: black;
+    border-radius: 1px;
+}
