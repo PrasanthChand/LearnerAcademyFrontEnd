@@ -24,4 +24,5 @@ export class StudentService {
   public getStudentById(studentId: number){
     return this.http.get<Student>(this.url+"/"+studentId);
   }
+
 }
