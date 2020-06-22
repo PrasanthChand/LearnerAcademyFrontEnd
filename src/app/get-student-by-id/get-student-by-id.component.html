@@ -1,9 +1,17 @@
-<!-- <div>
+<div>
     <h3>Get Student by Id</h3>
+   
+        
+        <td><input type="number" [(ngModel)]="studentId" placeholder="student Id"></td>
+        
+        <button (click)="getStudentById()">Get Student</button>
+   
     <table>
+        <th>studentId</th>
+        <th>studentName</th>
         <tr>
-            <td><input type="text" [(ngModel)]="student.studentId" placeholder="student Id"></td>
+            <td>{{student.studentId}}</td>
+            <td>{{student.studentName}}</td>
         </tr>
-        <tr><button (click)="getStudentById()">Get Student</button></tr>
     </table>
-</div> -->
+</div>

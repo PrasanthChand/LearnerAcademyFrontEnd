@@ -9,6 +9,7 @@ import { Student } from './student';
 
 export class StudentService {
   private url: string;
+
   constructor(private http: HttpClient) {
     this.url = "http://localhost:8080/Learner_Academy/Student"
   }
@@ -21,7 +22,7 @@ export class StudentService {
     return this.http.post<Student>(this.url, student);
   }
 
-  public getStudentById(studentId: number){
+  public getStudentById(studentId: number):Observable<Student>{
     return this.http.get<Student>(this.url+"/"+studentId);
   }
 

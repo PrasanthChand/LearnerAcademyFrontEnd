@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from '../student';
+import { StudentService } from '../student.service';
+
 
 @Component({
   selector: 'app-get-student-by-id',
-  templateUrl:'./get-student-by-id.component.html',
+  templateUrl: './get-student-by-id.component.html',
   styleUrls: ['./get-student-by-id.component.css']
 })
-export class GetStudentByIdComponent implements OnInit {
+export class GetStudentByIdComponent {
+  public student: Student;
+  public studentId: number;
+ 
+  constructor(private service: StudentService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  getStudentById() {
+    this.service.getStudentById(this.studentId).subscribe(data => {
+      this.student = data;
+     });
   }
-
 }
