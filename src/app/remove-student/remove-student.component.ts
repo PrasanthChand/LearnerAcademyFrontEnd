@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../student';
-import {StudentService} from '../student.service';
+import { StudentService } from '../student.service';
 
 
 @Component({
@@ -8,23 +8,21 @@ import {StudentService} from '../student.service';
   templateUrl: './remove-student.component.html',
   styleUrls: ['./remove-student.component.css']
 })
-export class RemoveStudentComponent implements OnInit {
-  // studentList: Student[];
-  // studentIdModel: number;
-  constructor() { }
+export class RemoveStudentComponent {
 
-  // removeStudent() {
-  //   let i = 0;
-  //   this.studentList.forEach(s => {
-  //     if (s.studentId == this.studentIdModel) {
-  //       this.studentList.splice(i, 1);
-  //     }
-  //     i++;
-  //   });
-  //   this.router.navigate(['/getAllStudents']);
-  // }
+  constructor(private service: StudentService) { }
+  public students: Student[];
+  public studentId: number;
 
-  ngOnInit() :void {
-  }
-
+  removeStudent() {
+        let i=1;
+          this.service.removeStudent(this.studentId).forEach(s=>{
+          console.log(s.studentId);
+          if(s.studentId==this.studentId){
+            this.students.splice(i,1);
+          }
+          i++;
+        });
+        }
+  
 }

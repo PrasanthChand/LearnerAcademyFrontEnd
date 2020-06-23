@@ -8,12 +8,12 @@ import {StudentService} from '../student.service';
   styleUrls: ['./get-all-students.component.css']
 })
 export class GetAllStudentsComponent implements OnInit {
-public student: Student[];
+public students: Student[];
   constructor(private service:StudentService) { }
 
   ngOnInit() {
     this.service.getAllStudents().subscribe(data=>{
-    this.student=data;
+    this.students=data;
     });
   }
 

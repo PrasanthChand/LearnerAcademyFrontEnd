@@ -9,8 +9,7 @@ import { Student } from './student';
 
 export class StudentService {
   private url: string;
-
-  constructor(private http: HttpClient) {
+   constructor(private http: HttpClient) {
     this.url = "http://localhost:8080/Learner_Academy/Student"
   }
 
@@ -25,5 +24,10 @@ export class StudentService {
   public getStudentById(studentId: number):Observable<Student>{
     return this.http.get<Student>(this.url+"/"+studentId);
   }
+
+  public removeStudent(studentId: number):Observable<Student>{
+    return this.http.delete<Student>(this.url+"/"+studentId);
+  }
+
 
 }
