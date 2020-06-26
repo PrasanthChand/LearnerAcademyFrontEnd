@@ -1,4 +1,13 @@
 <div>
+    <table>
+        <th>studentId</th>
+        <th>studentName</th>
+        <tr *ngFor="let Student of students">
+            <td>{{Student.studentId}}</td>
+            <td>{{Student.studentName}}</td>
+        </tr>
+    </table>
+
     <h3>Remove Student by ID</h3>
     <td><input type="number" [(ngModel)]="studentId" placeholder="student Id"></td>
     <button (click)="removeStudent()">Remove Student</button>

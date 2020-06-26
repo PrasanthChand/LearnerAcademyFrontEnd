@@ -11,12 +11,14 @@ import { StudentService } from '../student.service';
 export class GetStudentByIdComponent {
   public student: Student;
   public studentId: number;
- 
-  constructor(private service: StudentService) { }
+
+  constructor(private service: StudentService) { 
+    this.student = new Student();
+  }
 
   getStudentById() {
     this.service.getStudentById(this.studentId).subscribe(data => {
       this.student = data;
-     });
+    });
   }
 }
