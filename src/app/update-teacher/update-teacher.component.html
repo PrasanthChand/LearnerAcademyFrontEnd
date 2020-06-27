@@ -1,0 +1,19 @@
+<div>
+        <table>
+            <th>teacherId</th>
+            <th>teacherName</th>
+            <tr *ngFor="let Teacher of teachers">
+                <td>{{Teacher.teacherId}}</td>
+                <td>{{Teacher.teacherName}}</td>
+            </tr>
+        </table>
+        <h3>Update Teacher by ID</h3>
+        <td><input type="number" [(ngModel)]="teacher.teacherId" placeholder="teacher Id"></td>
+        <td><input type="text" [(ngModel)]="teacher.teacherName" placeholder="teacher Name"></td>
+        <button (click)="updateTeacher()">Update Teacher</button>
+        <br />
+        <br />
+        <br />
+       
+    </div>
+    

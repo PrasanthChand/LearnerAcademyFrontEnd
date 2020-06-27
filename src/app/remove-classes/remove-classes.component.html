@@ -1,0 +1,18 @@
+<div>
+        <table>
+            <th>class Id</th>
+            <th>class Name</th>
+            <tr *ngFor="let Classes of classess">
+                <td>{{Classes.classId}}</td>
+                <td>{{Classes.className}}</td>
+            </tr>
+        </table>
+    
+        <h3>Remove Class by ID</h3>
+        <td><input type="number" [(ngModel)]="classId" placeholder="class Id"></td>
+        <button (click)="removeClasses()">Remove Classes</button>
+        <br />
+        <br />
+        <br />
+    </div>
+    

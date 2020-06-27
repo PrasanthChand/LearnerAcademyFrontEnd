@@ -1,0 +1,18 @@
+<div>
+        <table>
+            <th>teacherId</th>
+            <th>teacherName</th>
+            <tr *ngFor="let Teacher of teachers">
+                <td>{{Teacher.teacherId}}</td>
+                <td>{{Teacher.teacherName}}</td>
+            </tr>
+        </table>
+    
+        <h3>Remove Teacher by ID</h3>
+        <td><input type="number" [(ngModel)]="teacherId" placeholder="teacher Id"></td>
+        <button (click)="removeTeacher()">Remove Teacher</button>
+        <br />
+        <br />
+        <br />
+    </div>
+    

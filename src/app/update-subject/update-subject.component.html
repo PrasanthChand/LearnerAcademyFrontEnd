@@ -1,0 +1,19 @@
+<div>
+        <table>
+            <th>subjectId</th>
+            <th>subjectName</th>
+            <tr *ngFor="let Subject of subjects">
+                <td>{{Subject.subjectId}}</td>
+                <td>{{Subject.subjectName}}</td>
+            </tr>
+        </table>
+        <h3>Update Subject by ID</h3>
+        <td><input type="number" [(ngModel)]="subject.subjectId" placeholder="subject Id"></td>
+        <td><input type="text" [(ngModel)]="subject.subjectName" placeholder="subject Name"></td>
+        <button (click)="updateSubject()">Update Subject</button>
+        <br />
+        <br />
+        <br />
+       
+    </div>
+    

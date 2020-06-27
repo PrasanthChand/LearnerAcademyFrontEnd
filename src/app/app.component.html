@@ -1,18 +1,101 @@
-<body class="bg">
-<div class="heading">
-  <h2>Learner's Academy</h2>
-</div>
+<div class="jumbotron jumbotron-fluid">
+<div class="container">
 
-<div>
-  <ul>
+<body class="bg" >
+  <div class="heading">
+    <h2>Learner's Academy</h2>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary">Student</button>
+    <div class="dropdown-content">
+      <a href="/createStudent"> create Student</a>
+      <a href="/getAllStudents"> get All Students</a>
+      <a href="/getStudentById"> get Student By Id</a>
+      <a href="/removeStudent"> remove Student </a>
+      <a href="/updateStudent"> update Student</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+      <button type="button" class="btn btn-primary">Subject</button>
+      <div class="dropdown-content">
+          <a href=" /createSubject"> create Subject</a>
+          <a href=" /getAllSubject"> get All Subjects</a>
+          <a href=" /getSubjectById"> get Subject By Id</a>
+          <a href=" /removeSubject"> remove Subject </a>
+          <a href=" /updateSubject"> update Subject</a>
+        </div>
+  </div>
+
+  <div class="dropdown">
+      <button type="button" class="btn btn-primary">Teacher</button>
+      <div class="dropdown-content">
+          <a href=" /createTeacher"> create Teacher</a>
+          <a href=" /getAllTeachers"> get All Teachers</a>
+          <a href=" /getTeacherById"> get Teacher By Id</a>
+          <a href=" /removeTeacher"> remove Teacher </a>
+          <a href=" /updateTeacher"> update Teacher</a>
+        </div>
+  </div>
+
+  <div class="dropdown">
+      <button type="button" class="btn btn-primary">Classes</button>
+      <div class="dropdown-content">
+        <a href="/createClasses"> create Class</a>
+        <a href="/getAllClasses"> get All Classes</a>
+        <a href="/getClassesById"> get Class By Id</a>
+        <a href="/removeClasses"> remove Class</a>
+        <a href="/updateClasses"> update Class</a>
+      </div>
+    </div>
+    
+
+
+  <!-- <ul>
     <li><a routerLink="/createStudent"> createStudent</a></li>
     <li><a routerLink="/getAllStudents"> getAllStudents</a></li>
     <li><a routerLink="/getStudentById"> getStudentById</a></li>
     <li><a routerLink="/removeStudent"> removeStudent</a></li>
     <li><a routerLink="/updateStudent"> updateStudent</a></li>
+  </ul> -->
+
+  <!-- <ul>
+    <li ><a routerLink="/createSubject"> createSubject</a></li>
+    <li><a routerLink="/getAllSubject"> getAllSubject</a></li>
+    <li><a routerLink="/getSubjectById"> getSubjectById</a></li>
+    <li><a routerLink="/removeSubject"> removeSubject</a></li>
+    <li><a routerLink="/updateSubject"> updateSubject</a></li>
+  </ul> -->
+  <!-- <br />
+  <ul>
+    <li><a routerLink="/createTeacher"> createTeacher</a></li>
+    <li><a routerLink="/getAllTeachers"> getAllTeachers</a></li>
+    <li><a routerLink="/getTeacherById"> getTeacherById</a></li>
+    <li><a routerLink="/removeTeacher"> removeTeacher</a></li>
+    <li><a routerLink="/updateTeacher"> updateTeacher</a></li>
   </ul>
-</div>
-<div align="center">
-  <router-outlet></router-outlet>
-</div>
+  <br /> -->
+  <!-- <ul>
+    <li><a routerLink="/createClasses"> createClasses</a></li>
+    <li><a routerLink="/getAllClasses"> getAllClasses</a></li>
+    <li><a routerLink="/getClassesById"> getClassesById</a></li>
+    <li><a routerLink="/removeClasses"> removeClasses</a></li>
+    <li><a routerLink="/updateClasses"> updateClasses</a></li>
+  </ul> -->
+
+  <div align="center">
+    <router-outlet></router-outlet>
+  </div>
 </body>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  </div>
+  </div>

@@ -1,0 +1,20 @@
+<div>
+        <h3>Get Teacher by Id</h3>
+    
+        <td><input type="number" [(ngModel)]="teacherId" placeholder="teacher Id"></td>
+        <br />
+        <button (click)="getTeacherById()">Get Teacher</button>
+        <br />
+        <br />
+        <br />
+        
+        <table>
+            <th>teacherId</th>
+            <th>teacherName</th>
+            <tr>
+                <td>{{teacher.teacherId}}</td>
+                <td>{{teacher.teacherName}}</td>
+            </tr>
+        </table>
+    </div>
+    

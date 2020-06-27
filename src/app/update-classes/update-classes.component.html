@@ -1,0 +1,20 @@
+
+<div>
+        <table>
+            <th>class Id</th>
+            <th>class Name</th>
+            <tr *ngFor="let Classes of classess">
+                <td>{{Classes.classId}}</td>
+                <td>{{Classes.className}}</td>
+            </tr>
+        </table>
+        <h3>Update Class by ID</h3>
+        <td><input type="number" [(ngModel)]="classes.classId" placeholder="class Id"></td>
+        <td><input type="text" [(ngModel)]="classes.className" placeholder="class Name"></td>
+        <button (click)="updateClasses()">Update Class</button>
+        <br />
+        <br />
+        <br />
+       
+    </div>
+    

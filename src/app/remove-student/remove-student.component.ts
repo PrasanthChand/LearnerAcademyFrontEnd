@@ -17,16 +17,6 @@ export class RemoveStudentComponent implements OnInit {
   public students: Student[]=[];
   public studentId: number;
 
-  // removeStudent() {
-  //   let i = 1;
-  //   this.service.removeStudent(this.studentId).forEach(s => {
-  //     if (s.studentId == this.studentId) {
-  //       this.students.splice(i, 1);
-  //     }
-  //     i++;
-  //   });
-  // }
-
   removeStudent() {
     return this.service.removeStudent(this.studentId).subscribe(data => {
       this.student = data;
