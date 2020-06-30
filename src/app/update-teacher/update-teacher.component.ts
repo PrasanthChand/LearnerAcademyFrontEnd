@@ -11,14 +11,15 @@ import {Router} from '@angular/router'
 export class UpdateTeacherComponent implements OnInit{
   public teacher: Teacher;
   public teachers: Teacher[];
+
   constructor(private service: TeacherService, private route: Router) {
     this.teacher = new Teacher();
-  }
+   }
 
   updateTeacher(){
    return this.service.updateTeacher(this.teacher).subscribe(data => {
        this.teacher = new Teacher();
-       this.route.navigate(['/getAllTeachers']);
+       this.route.navigate(['/getAllTeachers']);
     });
   }
 

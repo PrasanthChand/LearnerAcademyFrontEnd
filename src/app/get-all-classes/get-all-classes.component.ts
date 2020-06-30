@@ -14,6 +14,7 @@ public classes: Classes[];
   ngOnInit() {
     this.service.getAllClasses().subscribe(data=>{
     this.classes=data;
+    // console.log(this.classes);
     });
   }
 

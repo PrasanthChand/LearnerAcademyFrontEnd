@@ -1,16 +1,11 @@
 <div>
-        <table>
-            <th>teacherId</th>
-            <th>teacherName</th>
-            <tr *ngFor="let Teacher of teachers">
-                <td>{{Teacher.teacherId}}</td>
-                <td>{{Teacher.teacherName}}</td>
+        <table><th>Teacher Id</th><th>Teacher Name</th><tr *ngFor="let Teacher of teachers"><td>{{Teacher.teacherId}}</td><td>{{Teacher.teacherName}}</td>
             </tr>
         </table>
         <h3>Update Teacher by ID</h3>
-        <td><input type="number" [(ngModel)]="teacher.teacherId" placeholder="teacher Id"></td>
-        <td><input type="text" [(ngModel)]="teacher.teacherName" placeholder="teacher Name"></td>
-        <button (click)="updateTeacher()">Update Teacher</button>
+        <td><input type="number" [(ngModel)]="teacher.teacherId" placeholder="Teacher Id"></td>
+        <td><input type="text" [(ngModel)]="teacher.teacherName" placeholder="Teacher Name"></td>
+        <button (click)="updateTeacher()">Update Teacher</button>
         <br />
         <br />
         <br />

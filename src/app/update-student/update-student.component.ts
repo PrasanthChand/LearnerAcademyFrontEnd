@@ -11,6 +11,7 @@ import {Router} from '@angular/router'
 export class UpdateStudentComponent implements OnInit{
   public student: Student;
   public students: Student[];
+
   constructor(private service: StudentService, private route: Router) {
     this.student = new Student();
   }

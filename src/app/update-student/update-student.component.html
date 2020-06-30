@@ -7,9 +7,11 @@
             <td>{{Student.studentName}}</td>
         </tr>
     </table>
+    <br />
     <h3>Update Student by ID</h3>
     <td><input type="number" [(ngModel)]="student.studentId" placeholder="student Id"></td>
     <td><input type="text" [(ngModel)]="student.studentName" placeholder="student Name"></td>
+    <br />
     <button (click)="updateStudent()">Update Student</button>
     <br />
     <br />

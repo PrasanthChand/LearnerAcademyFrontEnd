@@ -1,20 +1,75 @@
-
 <div>
-        <table>
-            <th>class Id</th>
-            <th>class Name</th>
-            <tr *ngFor="let Classes of classess">
-                <td>{{Classes.classId}}</td>
-                <td>{{Classes.className}}</td>
-            </tr>
-        </table>
-        <h3>Update Class by ID</h3>
-        <td><input type="number" [(ngModel)]="classes.classId" placeholder="class Id"></td>
-        <td><input type="text" [(ngModel)]="classes.className" placeholder="class Name"></td>
-        <button (click)="updateClasses()">Update Class</button>
-        <br />
-        <br />
-        <br />
-       
-    </div>
-    
+    <table>
+        <th>class Id</th>
+        <th>class Name</th>
+        <th>Student Id</th>
+        <th>Student Name</th>
+        <th>Subject Id</th>
+        <th>Subject Name</th>
+        <th>Teacher Id</th>
+        <th>Teacher Name</th>
+        <tr *ngFor="let Classes of classess">
+            <td>{{Classes.classId}}</td>
+            <td>{{Classes.className}}</td>
+            <td>
+                <table>
+                    <tr *ngFor="let Student of Classes.student">
+                        <td style="border-style: none">{{Student.studentId}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr *ngFor="let Student of Classes.student">
+                        <td style="border-style: none">{{Student.studentName}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr *ngFor="let Subject of Classes.subject">
+                        <td style="border-style: none">{{Subject.subjectId}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr *ngFor="let Subject of Classes.subject">
+                        <td style="border-style: none">{{Subject.subjectName}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr *ngFor="let Teacher of Classes.teacher">
+                        <td style="border-style: none">{{Teacher.teacherId}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr *ngFor="let Teacher of Classes.teacher">
+                        <td style="border-style: none">{{Teacher.teacherName}}</td>
+                    </tr>
+                </table>
+            </td>
+    </table>
+    <br />
+        <h3>Update Class</h3>
+    <td><input type="number" [(ngModel)]="classes.classId" placeholder="class Id"></td>
+    <td><input type="text" [(ngModel)]="classes.className" placeholder="class Name"></td>
+    <br />
+    <td><input type="number" [(ngModel)]="student.studentId" placeholder="Student Id"></td>
+    <td><input type="text" [(ngModel)]="student.studentName" placeholder="Student Name"></td>
+    <br />
+    <td><input type="number" [(ngModel)]="subject.subjectId" placeholder="Subject Id"></td>
+    <td><input type="text" [(ngModel)]="subject.subjectName" placeholder="Subject Name"></td>
+    <br />
+    <!-- <td><input type="number" [(ngModel)]="Subject.subjectId" placeholder="Teacher__Subject__Subject Id"></td>
+    <td><input type="text" [(ngModel)]="Subject.subjectName" placeholder="Teacher__Subject__Subject Name"></td> -->
+    <td><input type="number" [(ngModel)]="teacher.teacherId" placeholder="Teacher Id"></td>
+    <td><input type="text" [(ngModel)]="teacher.teacherName" placeholder="Teacher Name"></td>
+    <button (click)="updateClasses()">Update Class</button>
+    <br /><br /><br />
+
+</div>

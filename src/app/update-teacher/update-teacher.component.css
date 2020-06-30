@@ -2,7 +2,7 @@ h3 {
     text-decoration-color: black;
 }
 
-td {
+td,th {
     border: black solid 1px;
     text-align: center;
 }

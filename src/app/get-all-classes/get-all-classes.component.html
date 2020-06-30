@@ -1,13 +1,27 @@
 <div>
         <h3>Class List</h3>
-    </div>
-    
-    <table>
-        <th>class Id</th>
-        <th>class Name</th>
-        <tr *ngFor="let Classes of classes">
-            <td>{{Classes.classId}}</td>
-            <td>{{Classes.className}}</td>
-        </tr>
-    </table>
-    
+</div>
+<table>
+    <th>Class Id</th>
+    <th>Class Name</th>
+    <th>Student Id</th>
+    <th>Student Name</th>
+    <th>Subject Id</th>
+    <th>Subject Name</th>
+    <!-- <th>Teacher__Subject__Subject Id</th>
+    <th>Teacher__Subject__Subject Name</th> -->
+    <th>Teacher Id</th>
+    <th>Teacher Name</th>
+    <tr *ngFor="let Classes of classes">
+        <td>{{Classes.classId}}</td>
+        <td>{{Classes.className}}</td>
+        <td><table><tr *ngFor="let Student of Classes.student"><td style="border-style: none">{{Student.studentId}}</td></tr></table></td>
+        <td><table><tr *ngFor="let Student of Classes.student"><td style="border-style: none">{{Student.studentName}}</td></tr></table></td>
+        <td><table><tr *ngFor="let Subject of Classes.subject"><td style="border-style: none">{{Subject.subjectId}}</td></tr></table></td>
+        <td><table><tr *ngFor="let Subject of Classes.subject"><td style="border-style: none">{{Subject.subjectName}}</td></tr></table></td>
+        <!-- <td><table><tr *ngFor="let Subject of Classes.teacher"><td style="border-style: none">{{Subject.subjectId}}</td></tr></table></td>
+        <td><table><tr *ngFor="let Subject of Classes.teacher"><td style="border-style: none">{{Subject.subjectName}}</td></tr></table></td> -->
+        <td><table><tr *ngFor="let Teacher of Classes.teacher"><td style="border-style: none">{{Teacher.teacherId}}</td></tr></table></td>
+        <td><table><tr *ngFor="let Teacher of Classes.teacher"><td style="border-style: none">{{Teacher.teacherName}}</td></tr></table></td>
+  </tr>
+</table>

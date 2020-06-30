@@ -3,10 +3,6 @@
 </div>
 
 <table>
-        <th>subjectId</th>
-        <th>subjectName</th>
-        <tr *ngFor="let Subject of subjects">
-                <td>{{Subject.subjectId}}</td>
-                <td>{{Subject.subjectName}}</td>
-            </tr>
+    <th>subject Id</th><th>subject Name</th>
+    <tr *ngFor="let subject of subjects"><td>{{subject.subjectId}}</td><td>{{subject.subjectName}}</td></tr>
 </table>
