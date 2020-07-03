@@ -6,8 +6,8 @@ import {Teacher} from './teacher';
 export class Classes {
     classId:number;
     className:string;
-    students: Student[];
-    subjects: Subject[];
-    teachers: Teacher[];
+    student: Student[];
+    subject: Subject[];
+    teacher: Teacher[];
  }
 

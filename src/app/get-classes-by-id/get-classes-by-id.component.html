@@ -1,20 +1,16 @@
 <div>
-        <h3>Get Class by Id</h3>
-    
-        <td><input type="number" [(ngModel)]="classId" placeholder="class Id"></td>
-        <br />
-        <button (click)="getClassesById()">Get Classes</button>
-        <br />
-        <br />
-        <br />
-        
+        <h4>Get Class by Id</h4>
+    <td><input type="number" [(ngModel)]="classId" placeholder="class Id"></td>
+    <br  /><button (click)="getClassesById()">Get Classes</button>
+        <br  />
+        <br  />
+        <br  />
         <table>
-            <th>classId</th>
-            <th>className</th>
-            <tr>
-                <td>{{classes.classId}}</td>
-                <td>{{classes.className}}</td>
-            </tr>
-        </table>
-    </div>
-    
+        <th>classId</th>
+        <th>className</th>
+        <tr>
+            <td>{{classes.classId}}</td>
+            <td>{{classes.className}}</td>
+        </tr>
+    </table>
+</div>

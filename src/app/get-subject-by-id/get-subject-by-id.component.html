@@ -1,20 +1,18 @@
 <div>
-        <h3>Get Subject by Id</h3>
-    
+        <h4>Get Subject by Id</h4>
+
         <td><input type="number" [(ngModel)]="subjectId" placeholder="subject Id"></td>
-        <br />
+        <br  />
         <button (click)="getSubjectById()">Get Subject</button>
-        <br />
-        <br />
-        <br />
-        
+        <br  />
+        <br  />
+        <br  />
         <table>
-            <th>subjectId</th>
-            <th>subjectName</th>
-            <tr>
-                <td>{{subject.subjectId}}</td>
-                <td>{{subject.subjectName}}</td>
-            </tr>
-        </table>
-    </div>
-    
+        <th>subjectId</th>
+        <th>subjectName</th>
+        <tr>
+            <td>{{subject.subjectId}}</td>
+            <td>{{subject.subjectName}}</td>
+        </tr>
+    </table>
+</div>
